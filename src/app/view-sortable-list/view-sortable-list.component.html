@@ -1,0 +1,7 @@
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let option of options" cdkDrag>
+      <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+      <span [innerHTML]="option"></span>
+    </div>
+  </div>
+  
