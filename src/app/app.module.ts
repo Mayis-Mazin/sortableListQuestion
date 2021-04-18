@@ -8,12 +8,16 @@ import { ViewSortableListComponent } from './view-sortable-list/view-sortable-li
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditorModule } from '@tinymce/tinymce-angular';
+import { DragToTheBlankComponent } from './drag-to-the-blank/drag-to-the-blank/drag-to-the-blank.component';
+import { ViewDragToTheBlankComponent } from './drag-to-the-blank/view-drag-to-the-blank/view-drag-to-the-blank.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateSortableListComponent,
-    ViewSortableListComponent
+    ViewSortableListComponent,
+    DragToTheBlankComponent,
+    ViewDragToTheBlankComponent
   ],
   imports: [
     BrowserModule,
@@ -23,8 +27,8 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      {path: '', component: CreateSortableListComponent},
-      {path: 'sortlistquestions/view', component: ViewSortableListComponent}
+      {path: '', component: DragToTheBlankComponent},
+      {path: 'ViewDragToTheBlankComponent/view', component: ViewDragToTheBlankComponent}
     ]),
   ],
   providers: [],

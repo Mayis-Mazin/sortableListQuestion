@@ -1,0 +1,38 @@
+<div class="example-container">
+  <h2>List</h2>
+
+  <div
+    id="list"
+    cdkDropList
+    [cdkDropListData]="list"
+    cdkDropListConnectedTo="Dblank"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)"
+    [cdkDropListEnterPredicate]="noReturnPredicate">
+    <div
+      class="example-box"
+      *ngFor="let number of list"
+      [cdkDragData]="number"
+      cdkDrag>{{number}}</div>
+  </div>
+</div>
+
+<div class="example-container">
+  <h2>Blank</h2>
+
+  <div
+    id="Dblank"
+    cdkDropList
+    [cdkDropListData]="Dblank"
+    cdkDropListConnectedTo="list"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)"
+    [cdkDropListEnterPredicate]="evenPredicate">
+    <div
+      class="example-box"
+      *ngFor="let number of Dblank"
+      cdkDrag
+      [cdkDragData]="number">{{number}}</div>
+  </div>
+</div>
+
