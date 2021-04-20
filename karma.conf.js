@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/sortable-list'),
+      dir: require('path').join(__dirname, './coverage/b12-iq'),
       subdir: '.',
       reporters: [
         { type: 'html' },
