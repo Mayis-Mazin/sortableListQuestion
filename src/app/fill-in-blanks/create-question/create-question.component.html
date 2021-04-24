@@ -10,10 +10,10 @@
                             <label for="title" class="form-label">Question Title</label>
                             <input type="text" class="form-control" id="title" formControlName="title">
                         </div>
-                       
+
 
                         <div class="col-md-12">
-                            <label for="type" class="form-label" >Question Type  {{title}}</label>
+                            <label for="type" class="form-label">Question Type {{title}}</label>
                             <select formControlName="type" id="type" class="form-control" (change)='changeType($event)'
                                 aria-label="Default select example">
                                 <option *ngFor='let option of options'>{{option}}</option>
